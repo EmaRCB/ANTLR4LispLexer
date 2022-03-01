@@ -16,11 +16,10 @@ public class AppTest {
             OperacionesLexer lexer = new OperacionesLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             OperacionesParser parser = new OperacionesParser(tokens);
-            ParseTree tree = parser.exprS();
-            tree = parser.exprS();
+            ParseTree tree = parser.valor();
+            tree = parser.valor();
 
             System.out.println("Arbol de expresión: " + tree.toStringTree(parser));
-            System.out.println("Resultado: " + (new TLispPrefixEvaluator()).evaluate(iString));
         }
         sc.close();
     }
