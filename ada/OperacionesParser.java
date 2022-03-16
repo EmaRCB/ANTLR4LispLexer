@@ -16,7 +16,7 @@ public class OperacionesParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, OPERADOR=3, INT=4, FLOAT=5, Id=6, NL=7;
+		T__0=1, T__1=2, OPERADOR=3, INT=4, FLOAT=5, DOT=6, Id=7, NL=8;
 	public static final int
 		RULE_start = 0, RULE_operacion = 1, RULE_valor = 2, RULE_num = 3;
 	private static String[] makeRuleNames() {
@@ -28,13 +28,13 @@ public class OperacionesParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'('", "')'"
+			null, "'('", "')'", null, null, null, "'.'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, null, "OPERADOR", "INT", "FLOAT", "Id", "NL"
+			null, null, null, "OPERADOR", "INT", "FLOAT", "DOT", "Id", "NL"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -284,7 +284,7 @@ public class OperacionesParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\t\31\4\2\t\2\4\3"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\n\31\4\2\t\2\4\3"+
 		"\t\3\4\4\t\4\4\5\t\5\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\5\4\25\n"+
 		"\4\3\5\3\5\3\5\2\2\6\2\4\6\b\2\3\3\2\6\7\2\25\2\n\3\2\2\2\4\f\3\2\2\2"+
 		"\6\24\3\2\2\2\b\26\3\2\2\2\n\13\5\4\3\2\13\3\3\2\2\2\f\r\7\3\2\2\r\16"+
